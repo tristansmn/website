@@ -1,0 +1,57 @@
+.mountain-background {
+	animation: 0.5s ease-out 0s 1 LandScape;
+	background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1612888721/background-mountain_hisxgb.png);
+	background-size: 200vh 90vh;
+	position: absolute;
+	width: 200vh;
+	height: 80vh;
+	bottom: 0px;
+}
+
+.hill-background {
+	animation: 0.7s ease-out 0s 1 LandScape;
+	background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1612893230/background-tree_copy_gr4o6v.png);
+	background-size: 180vh 70vh;
+	position: absolute;
+	width: 180vh;
+	height: 53vh;
+	bottom: 0px;
+}
+
+.background-one {
+	animation: 0.7s ease-out 0s 1 LandScape;
+	position: absolute;
+	background: rgba(242, 252, 253, 0.35);
+    transform: rotate(-2deg);
+    width: 100%;
+    height: 200px;
+    bottom: -180px;
+}
+
+.background-two {
+	animation: 0.7s ease-out 0s 1 LandScape;
+	position: absolute;
+	background: rgba(255, 255, 255, 0.31);
+    transform: rotate(2deg);
+    transform: rotate(+2deg);
+    width: 100%;
+    height: 200px;
+    bottom: -180px;
+}
+
+.lottie-biker {
+  animation: 3s ease-out 0s 1 Lottie;
+  position: absolute;
+  bottom: 0px;
+  width: 100%
+}
+
+@keyframes LandScape {
+  0% { transform: translateY(200%);}
+  100% {transform: translateY(0);}
+}
+
+@keyframes Lottie {
+  0% { transform: translateX(-100%);}
+  100% {transform: translateX(0);}
+}

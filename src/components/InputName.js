@@ -1,4 +1,5 @@
 import React from 'react';
+import './inputName.css';
 
  
 
@@ -12,17 +13,17 @@ class InputName extends React.Component {
 
   render() {
     return (
-      <div className="ui segment">
-        <form className='ui form' onSubmit={this.onFormSubmit}>
-          <div className='field'>
-            <label>Image Search</label>
-            <input 
+      <div className="container-form">
+        <form className='form' onSubmit={this.onFormSubmit}>
+            <label>Please, enter your <span className='key-word'>Name</span></label>
+            <input className='name-input'
                 type="text" 
-                placeholder="Put something here" 
+                placeholder="Your Name"
+                autofocus="autofocus"
                 value={this.state.name} // use this to have controlled component, the component is stored on react world
                 onChange={e => this.setState({name: e.target.value})}  
             /> 
-          </div>
+            <button className='name-button' type="submit">Let's begin</button>
         </form>
       </div>  
     )

@@ -1,6 +1,8 @@
 import React from 'react';
+import './App.css';
 import InputName from './InputName.js';
-import Name from './Name.js';
+import Content from './Content.js';
+import LandScape from './LandScape.js';
 
 
 class App extends React.Component {
@@ -14,9 +16,10 @@ class App extends React.Component {
 	render () {
 	  return (
 	  	<div>
-		    <div className="ui container" style={{marginTop: '10px'}}>
+		    <div className="container">
 		      <InputName onSubmit={this.onNameSubmit}/>
-		      <Name name={this.state.name}/>
+		      <Content name={this.state.name}/>
+		      <LandScape name={this.state.name}/>
 		    </div> 
 	    </div>
 	  ) 
