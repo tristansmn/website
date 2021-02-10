@@ -1,6 +1,7 @@
 import React from 'react';
 import LottieAnimation from './Lottie';
 import home from '../lotties/biker.json';
+
 import './landscape.css'
 
 const LandScape = ({name}) => {
@@ -15,7 +16,9 @@ const LandScape = ({name}) => {
       	<div className="hill-background"></div>
       	<div className="background-one"></div>
       	<div className="background-two"></div>
-      	<div className='lottie-biker'><LottieAnimation  lotti={home} height={300} width={300} /></div>
+      	<div className='lottie-biker'>
+      	  <LottieAnimation  lotti={home} height={250} width={250} />
+      	</div>
       </div>
     )
 }

@@ -1,8 +1,9 @@
 import React from 'react';
-import './App.css';
 import InputName from './InputName.js';
 import Content from './Content.js';
 import LandScape from './LandScape.js';
+
+import './App.css';
 
 
 class App extends React.Component {
