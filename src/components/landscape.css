@@ -1,26 +1,39 @@
-.mountain-background {
-	animation: 0.5s ease-out 0s 1 LandScape;
-	background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1612888721/background-mountain_hisxgb.png);
-	background-size: 200vh 90vh;
-	position: absolute;
+.mountain-container {
+	position: fixed;
 	width: 200vh;
 	height: 80vh;
 	bottom: 0px;
+	z-index: -2
 }
 
-.hill-background {
-	animation: 0.7s ease-out 0s 1 LandScape;
-	background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1612893230/background-tree_copy_gr4o6v.png);
-	background-size: 180vh 70vh;
-	position: absolute;
-	width: 180vh;
+.background-mountain {
+  animation: 0.5s ease-out 0s 1 LandScape;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1612888721/background-mountain_hisxgb.png);
+  background-size: 200vh 90vh;
+
+}
+
+.container-hill {
+	position: fixed;
+	width: 200vh;
 	height: 53vh;
-	bottom: 0px;
+	bottom: 0;
+	left: 0;
+}
+
+.background-hill {
+	animation: 0.7s ease-out 0s 1 LandScape;
+	width: 100%;
+    height: 100%;
+	background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1612893230/background-tree_copy_gr4o6v.png);
+	background-size: 200vh 70vh;
 }
 
 .background-one {
 	animation: 0.7s ease-out 0s 1 LandScape;
-	position: absolute;
+	position: fixed;
 	background: rgba(242, 252, 253, 0.35);
     transform: rotate(-2deg);
     width: 100%;
@@ -30,7 +43,7 @@
 
 .background-two {
 	animation: 0.7s ease-out 0s 1 LandScape;
-	position: absolute;
+	position: fixed;
 	background: rgba(255, 255, 255, 0.31);
     transform: rotate(2deg);
     transform: rotate(+2deg);
@@ -39,11 +52,23 @@
     bottom: -180px;
 }
 
+.lottie-container {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
 .lottie-biker {
   animation: 3s ease-out 0s 1 Lottie;
-  position: absolute;
-  bottom: 0px;
   width: 100%
+}
+
+.container-canvas {
+	position: fixed;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
 }
 
 @keyframes LandScape {
@@ -52,6 +77,6 @@
 }
 
 @keyframes Lottie {
-  0% { transform: translateX(-100%);}
+  0% { transform: translateX(-200%);}
   100% {transform: translateX(0);}
 }

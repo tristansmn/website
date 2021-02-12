@@ -1,0 +1,45 @@
+ @keyframes onLoadContent {
+  0% { transform: translateY(-400px) }
+  100% { transform: translateY(0) }
+}
+
+.content-container {
+  width: 400%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: 1;
+}
+
+.display-content {
+	width: 50%;
+	height: 100vh;
+	margin: 0 auto;
+	scroll-behavior: smooth;
+}
+
+.scroll-one {
+	margin: 200px auto;
+	display: inline-block;
+
+}
+
+.scroll-two {
+	margin: 200px auto;
+	display: inline-block;
+
+}
+.two {
+    scroll-snap-stop: always;
+}
+
+.scroll-three {
+	margin: 200px auto;
+	display: inline-block;
+
+}
+
+.first-content {
+  	animation: 1s ease-out 0s 1 onLoadContent;
+}
+

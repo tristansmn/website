@@ -21,6 +21,7 @@ class App extends React.Component {
 		      <InputName onSubmit={this.onNameSubmit}/>
 		      <Content name={this.state.name}/>
 		      <LandScape name={this.state.name}/>
+		      <button className='btn button-principal resume-button' type="submit" onClick={this.switch}>RESUME</button>
 		    </div> 
 	    </div>
 	  ) 
