@@ -1,8 +1,8 @@
 body {
 	font-family: 'Amatic SC', cursive;
     margin-top: 20px;;
-	font-size: 40px;
-	color: #fff5ce;
+	font-size: 30px;
+	color: #f1eeeb;
     line-height: 36px;
 	background-color: #000E1F;
 	overflow-x: hidden;
@@ -18,12 +18,37 @@ body::-webkit-scrollbar {
 
 }
 
+ul {
+  padding-left: 0px;	
+}
+
+li {
+  padding-left: 0px;
+  list-style-type: none;
+  margin-left: 0px;
+}
+
+span {
+  font-family: 'Teko', sans-serif;
+}
+
+.title {
+	font-family: 'Teko', sans-serif;
+	font-size: 47px;
+	color: #f1eeeb;
+}
+
+.border {
+	border-bottom: 1px solid grey;
+}
+
 .key-word {
 	color: #E85353;
 	font-weight: bold;
 }
 
 .key-word-blank {
-	color: #fff5ce;
+	color: White;
 	font-weight: bold;
 }
+

@@ -1,9 +1,9 @@
-import { useRef ,useEffect } from "react";
+import { useEffect } from "react";
 import LottieAnimation from './Lottie';
-import home from '../lotties/biker.json';
+import home from '../../lotties/biker.json';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Snow from './Canvas.js'
+
 
 import './landscape.css'
 
@@ -12,7 +12,7 @@ import './landscape.css'
 const LandScape = ({name}) => {
 	gsap.registerPlugin(ScrollTrigger);
 
-   useEffect(() => {
+   // useEffect(() => {
     gsap.to(".mountain-container", {
         scrollTrigger: {
           start: 0,
@@ -24,9 +24,9 @@ const LandScape = ({name}) => {
         ease: "none",
         duration: 2,
       })
-    }, []);
+    // }, []);
 
-    useEffect(() => {
+    // useEffect(() => {
       gsap.to(".container-hill", {
         scrollTrigger: {
           start: 0,
@@ -38,7 +38,7 @@ const LandScape = ({name}) => {
         ease: "none",
         duration: 2,
       })
-  }, []);
+  // }, []);
 
     const contentToRenderMountain = () => {
  	  if (name !== '') {
@@ -88,8 +88,7 @@ const LandScape = ({name}) => {
 	  	</div>
 	  	<div className="lottie-container "data-speed="1">
 	  	  {contentToRenderLottie()}
-	  	</div>
-	  	<Snow />
+	  	</div> 	
 	  </div>
 	)
 }

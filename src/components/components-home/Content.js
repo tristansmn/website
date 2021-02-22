@@ -6,21 +6,24 @@ import './Content.css';
 
 function Content({name}) {
   gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-  	let sections = gsap.utils.toArray(".display-content");
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: '.content-container',
-        pin: true,
-        scrub: 0.5,
-        snap: 1 / (sections.length - 1),
-    // base vertical scrolling on how wide the container is so it feels more natural.
-       end: () => "+=" + document.querySelector(".content-container").offsetWidth
-      }
-    });
-  }, []);
+  // useEffect(() => {
+    if (document.querySelector(".content-container") != null) {
+    	let sections = gsap.utils.toArray(".display-content");
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: '.content-container',
+          pin: true,
+          scrub: 0,
+          snap: 1 / (sections.length - 1),
+      // base vertical scrolling on how wide the container is so it feels more natural.
+         end: () => "+=" + document.querySelector(".content-container").offsetWidth
+        }
+      });
+    }
+  // }, []);
+
 
  const contentToRenderOne = () => {
  	if (name !== '') {

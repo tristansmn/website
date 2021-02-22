@@ -11,15 +11,11 @@
   font-family: 'Teko', sans-serif;
   background:transparent;
   outline:none;
-  border: 1px solid #d2d2d2;
-  transition: .4s cubic-bezier(.215,.61,.355,1)
-
+  border: 2px solid #d2d2d2;
 }
 
-div:hover {
-}
-
-.resume-button {
+.container-resume {
+  text-decoration: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -27,4 +23,45 @@ div:hover {
   margin-right: 20px;
   width: 200px;
   height: 50px;
+  z-index: 1;
+
 }
+
+.resume-button {
+  animation: 0.7s ease-out 0s 1 Button;
+  text-decoration: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 200px;
+  height: 50px;
+  z-index: 1;
+}
+
+.resume-button a {
+  width: 100%;
+  padding-top: 7px;
+  margin: auto;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes Button {
+  0% { opacity: 0;}
+  100% {opacity: 1}
+}
+
+/*.nav {
+	width: 100px;
+	height: 100vh;
+	border-right: 1px solid white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -2
+}*/
+
+

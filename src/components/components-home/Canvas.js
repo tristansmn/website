@@ -34,7 +34,6 @@ class Snow extends React.Component {
     const ctx = canvas[0].getContext("2d");
 
     this.setState({canvasCtx: ctx});
-    console.log(window.innerWidth);
 
     //canvas dimensions
     let W = this.state.width;
@@ -57,6 +56,8 @@ class Snow extends React.Component {
         d: Math.random() * mp //density
       });
     }
+
+    console.log(Math.random())
 
     //Lets draw the flakes
     function draw() {

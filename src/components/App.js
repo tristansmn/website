@@ -1,7 +1,16 @@
 import React from 'react';
-import InputName from './InputName.js';
-import Content from './Content.js';
-import LandScape from './LandScape.js';
+import { render } from 'react-dom';
+import { 
+  Route, 
+  Switch, 
+  BrowserRouter,
+} from 'react-router-dom';
+import { 
+  CSSTransition, 
+  TransitionGroup 
+} from 'react-transition-group';
+import Home from './Home.js'
+import Resume from './Resume.js'
 
 import './App.css';
 
@@ -16,14 +25,23 @@ class App extends React.Component {
 
 	render () {
 	  return (
-	  	<div>
-		    <div className="container">
-		      <InputName onSubmit={this.onNameSubmit}/>
-		      <Content name={this.state.name}/>
-		      <LandScape name={this.state.name}/>
-		      <button className='btn button-principal resume-button' type="submit" onClick={this.switch}>RESUME</button>
-		    </div> 
-	    </div>
+	   <BrowserRouter>
+	  	<main>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              component={Home}
+            />
+            <Route
+              path="/resume"
+              component={Resume}
+            />
+          </Switch>
+          
+        </main>
+       </BrowserRouter>
+	  	
 	  ) 
 	}
 }

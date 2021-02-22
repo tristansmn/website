@@ -12,7 +12,6 @@ class InputName extends React.Component {
     event.preventDefault();
 
     if(this.validateName()){
-      console.log(this.state)
       this.props.onSubmit(this.state.name) 
     }  
   };
